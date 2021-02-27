@@ -10,28 +10,28 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage: Provisioning stage (A)
+- stage: provisioning_stage_A
   jobs:
   - job: A1
     steps:
     - script:  echo Preparing the environment!
-- stage: Build stage (B)
+- stage: build_stage_B
   jobs:
   - job: B1
-    displayName: Initial job
+    displayName: initial_job
     steps: 
     - script: echo Hello, world!
     - script: echo Something is fishy!
   - job: B2
-    displayName: Second job
+    displayName: second_job
     steps:
     - script: echo Building the app!
-- stage: Test stage (C)
+- stage: test_stage_C
   jobs:
   - job: A1
     steps:
     - script:  echo Testing the app!
-- stage: Deploy stage (D)
+- stage: deploy_stage_D
   jobs:
   - job: A1
     steps:
